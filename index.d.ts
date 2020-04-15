@@ -22,8 +22,8 @@ export function init(
 
 export function addFile(file: File): void
 export function deleteFile(index: number): void
-export function clearFiles(callback: (files: File[]) => void): void
-export function listFiles(): void
+export function clearFiles(): void
+export function listFiles(callback: (files: File[]) => void): void
 export function cancelFile(index: number): void
 export function start(): void
 export function stop(): void
