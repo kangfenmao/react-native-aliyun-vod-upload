@@ -1,4 +1,4 @@
-import { DeviceEventEmitterStatic } from 'react-native';
+import { DeviceEventEmitterStatic } from 'react-native'
 
 interface File {
   path: string
@@ -15,19 +15,19 @@ interface InitParams {
   uploadAddress: string
 }
 
-export function init(
-  init: InitParams,
-  callback: (result: any) => void
-): void
+interface AliyunVodFileUploadInterface {
+  init(init: InitParams, callback: (result: any) => void): void
+  addFile(file: File): void
+  deleteFile(index: number): void
+  clearFiles(): void
+  listFiles(callback: (files: File[]) => void): void
+  cancelFile(index: number): void
+  start(): void
+  stop(): void
+  pause(): void
+  resume(): void
+}
 
-export function addFile(file: File): void
-export function deleteFile(index: number): void
-export function clearFiles(): void
-export function listFiles(callback: (files: File[]) => void): void
-export function cancelFile(index: number): void
-export function start(): void
-export function stop(): void
-export function pause(): void
-export function resume(): void
-
-export const AliyunVodUploadEmitter: DeviceEventEmitterStatic
+export const AliyunVodFileUpload: AliyunVodFileUploadInterface
+export const AliyunVodFileUploadEmitter: DeviceEventEmitterStatic
+export const AliyunVodVideoUploadEmitter: DeviceEventEmitterStatic

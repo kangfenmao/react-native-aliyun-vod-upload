@@ -1,7 +1,7 @@
-#import "AliyunVodUpload.h"
+#import "AliyunVodFileUpload.h"
 #import <React/RCTConvert.h>
 
-@implementation AliyunVodUpload
+@implementation AliyunVodFileUpload
 
 RCT_EXPORT_MODULE()
 

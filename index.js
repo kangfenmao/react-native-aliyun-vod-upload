@@ -1,7 +1,10 @@
 import { NativeModules, NativeEventEmitter } from 'react-native'
 
-const { AliyunVodUpload } = NativeModules
+const { AliyunVodFileUpload, AliyunVodVideoUpload } = NativeModules
 
-export const AliyunVodUploadEmitter = new NativeEventEmitter(AliyunVodUpload)
+export const AliyunVodFileUploadEmitter = new NativeEventEmitter(AliyunVodFileUpload)
 
-export default AliyunVodUpload
+export {
+  AliyunVodFileUpload,
+  AliyunVodVideoUpload
+}

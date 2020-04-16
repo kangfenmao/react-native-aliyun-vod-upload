@@ -22,12 +22,12 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AliyunVodUploadModule extends ReactContextBaseJavaModule {
+public class AliyunVodFileUploadModule extends ReactContextBaseJavaModule {
     private final ReactApplicationContext reactContext;
     private VODUploadClient uploader;
     private String videoId;
 
-    public AliyunVodUploadModule(ReactApplicationContext reactContext) {
+    public AliyunVodFileUploadModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
         this.uploader = new VODUploadClientImpl(reactContext.getApplicationContext());
@@ -35,7 +35,7 @@ public class AliyunVodUploadModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "AliyunVodUpload";
+        return "AliyunVodFileUpload";
     }
 
     private void sendEvent(ReactContext reactContext, String eventName, @Nullable WritableMap params) {

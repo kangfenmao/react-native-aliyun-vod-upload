@@ -24,10 +24,10 @@ repositories {
 ## Usage
 
 ```javascript
-import AliyunVodUpload from 'react-native-aliyun-vod-upload'
+import { AliyunVodFileUpload, AliyunVodFileUploadEmitter } from 'react-native-aliyun-vod-upload'
 
 // Init
-AliyunVodUpload.init(
+AliyunVodFileUpload.init(
   {
     videoId: '',
     uploadAuth: '',
@@ -38,7 +38,7 @@ AliyunVodUpload.init(
   }
 )
 
-AliyunVodUpload.addFile({
+AliyunVodFileUpload.addFile({
   path: '',
   type: 'mp4',
   title: '',
@@ -47,23 +47,23 @@ AliyunVodUpload.addFile({
   tags: ''
 })
 
-AliyunVodUpload.start()
+AliyunVodFileUpload.start()
 ```
 
 ## API
 
 ```javascript
 // Manage files
-AliyunVodUpload.deleteFile(index: number)
-AliyunVodUpload.clearFiles()
-AliyunVodUpload.listFiles(callback: (files: File[]) => void)
-AliyunVodUpload.cancelFile(index: number)
+AliyunVodFileUpload.deleteFile(index: number)
+AliyunVodFileUpload.clearFiles()
+AliyunVodFileUpload.listFiles(callback: (files: File[]) => void)
+AliyunVodFileUpload.cancelFile(index: number)
 
 // Upload control
-AliyunVodUpload.start()
-AliyunVodUpload.stop()
-AliyunVodUpload.pause()
-AliyunVodUpload.resume()
+AliyunVodFileUpload.start()
+AliyunVodFileUpload.stop()
+AliyunVodFileUpload.pause()
+AliyunVodFileUpload.resume()
 ```
 
 ## Event Listener
@@ -73,16 +73,16 @@ emitters: EmitterSubscription[] = []
 
 componentDidMount() {
   this.emitters.push(
-    AliyunVodUploadEmitter.addListener('OnUploadStarted', (result: any) => {
+    AliyunVodFileUploadEmitter.addListener('OnUploadStarted', (result: any) => {
       console.log('[start]', result)
     }),
-    AliyunVodUploadEmitter.addListener('OnUploadProgress', (result: any) => {
+    AliyunVodFileUploadEmitter.addListener('OnUploadProgress', (result: any) => {
       console.log('[progress]', Math.floor(result.progress * 100) + '%')
     }),
-    AliyunVodUploadEmitter.addListener('OnUploadFailed', (result: any) => {
+    AliyunVodFileUploadEmitter.addListener('OnUploadFailed', (result: any) => {
       console.log('[failed]', result)
     }),
-    AliyunVodUploadEmitter.addListener('onUploadSucceed', (result: any) => {
+    AliyunVodFileUploadEmitter.addListener('onUploadSucceed', (result: any) => {
       console.log('[succeed]', result)
     })
   )
