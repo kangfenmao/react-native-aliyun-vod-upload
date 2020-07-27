@@ -1,7 +1,7 @@
 {
   "name": "@kangfenmao/react-native-aliyun-vod-upload",
   "title": "React Native Aliyun Vod Upload",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "阿里云视频点播上传 React Native 版 SDK",
   "main": "index.js",
   "scripts": {
