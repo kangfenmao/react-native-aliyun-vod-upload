@@ -1,5 +1,5 @@
 {
-  "name": "react-native-aliyun-vod-upload",
+  "name": "@kangfenmao/react-native-aliyun-vod-upload",
   "title": "React Native Aliyun Vod Upload",
   "version": "0.0.1",
   "description": "阿里云视频点播上传 React Native 版 SDK",
@@ -13,10 +13,13 @@
     "baseUrl": "https://github.com/excitedcat/react-native-aliyun-vod-upload"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "aliyun",
+    "vod",
+    "upload"
   ],
   "author": {
-    "name": "excitedcat",
+    "name": "kangfenmao",
     "email": "kangfenmao@gmail.com"
   },
   "license": "MIT",
@@ -29,5 +32,8 @@
   "devDependencies": {
     "react": "^16.9.0",
     "react-native": "^0.61.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
