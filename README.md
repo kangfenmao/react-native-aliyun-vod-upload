@@ -2,7 +2,7 @@
 
 ## Getting started
 
-`$ npm install react-native-aliyun-vod-upload`
+`$ npm install @kangfenmao/react-native-aliyun-vod-upload`
 
 ### iOS
 
