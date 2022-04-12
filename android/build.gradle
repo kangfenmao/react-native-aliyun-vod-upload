@@ -75,6 +75,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
     implementation 'com.aliyun.video.android:upload:1.6.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
 }
 
 def configureReactNativePom(def pom) {
